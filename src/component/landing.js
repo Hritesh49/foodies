@@ -10,7 +10,7 @@ const Landing = () => {
     const [user, setUser] = useState('hritesh');
 
     if (!user) {
-        return <Navigate to={"/"} />
+        return <Navigate to={"/foodies"} />
     }
 
     return (

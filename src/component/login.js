@@ -85,7 +85,7 @@ const Login = () => {
     return (
         <div className="back">
             <Paper elevation={0} className="main_container">
-                <Form className="LoginBox" method="post" action="/">
+                <Form className="LoginBox" method="post" action="/foodies">
                     <h1>Login</h1>
                     <div className="input_fields">
                         <Box className="Username">
@@ -183,7 +183,7 @@ const Loginaction = async ({ request }) => {
     console.log(submission);
 
 
-    return redirect('/landing');
+    return redirect('/foodies/landing');
 
 }
 

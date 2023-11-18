@@ -7,8 +7,8 @@ import Landing from './component/landing';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route path="/" element={<Login />} action={Loginaction} />
-      <Route path='/landing' element={<Landing />} />
+      <Route path="/foodies" element={<Login />} action={Loginaction} />
+      <Route path='/foodies/landing' element={<Landing />} />
     </Route>
   )
 )
