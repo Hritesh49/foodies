@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --darknavyblue: #000063;
+}
+
+.back {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to left bottom, #ffffff, #969696);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.main_container {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: white !important;
+    border-radius: .5rem !important;
+}
+
+.LoginBox {
+    width: 30%;
+    height: auto;
+    background-color: white;
+    padding: 4.375rem 3.125rem;
+    color: var(--darknavyblue);
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+}
+
+.LoginBox h1 {
+    font-size: 2.8125rem;
+    position: relative;
+}
+
+.LoginBox h1::after {
+    content: '';
+    position: absolute;
+    width: 2.375rem;
+    height: .375rem;
+    background-color: var(--darknavyblue);
+    border-radius: .5rem;
+    bottom: 0rem;
+    transform: translateX(-100%);
+}
+
+
+.image_container {
+    width: 70%;
+    height: auto;
+    /* background: linear-gradient(to top right, white, var(--lightgray)); */
+    background: linear-gradient(to top , white , rgba(125, 125, 125, 0.793));
+    border-top-left-radius: 6.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_container>div {
+    width: 80% !important;
+    height: 32rem !important;
+}
+
+.input_fields {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.icons {
+    font-size: 1.5rem !important;
+}
+
+.Username>input, .Email>input, .password_box>input {
+    font-size: .1875rem !important;
+}
+
+.Username {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: .125rem;
+}
+
+.Email {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.Password {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.password_box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: .125rem;
+}
+
+.password_show {
+    display: flex;
+    flex-direction: row;
+    align-items: center !important;
+    justify-content: flex-start;
+    gap: .25rem;
+    padding-left: .25rem;
+}
+
+.submit_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .25rem;
+    width: 100%;
+}
+.submit_btn>button {
+    width: 100%;
+    padding: .5rem !important;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--darknavyblue);
+    border-radius: .25rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.lower_links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+}
+
+
+
+@media screen and (max-width:1440px) {
+    html {
+        font-size: 100%;
+    }
+}
+@media screen and (max-width:1024px) {
+    html {
+        font-size: 98%;
+    }
+}
+@media screen and (max-width:800px) {
+    html {
+        font-size: 80%;
+    }
+    .LoginBox {
+        padding: 50px 40px;
+        width: 35%;
+    }
+    .image_container {
+        width: 55%;
+    }
+    .image_container>div {
+        width: 80% !important;
+        height: 30em !important;
+    }
+}
+@media screen and (max-width:600px) {
+    html {
+        font-size: 80%;
+    }
+    .LoginBox {
+        padding: 50px 40px;
+        width: 100%;
+        backdrop-filter: blur(8px);
+        justify-content: center;
+        align-items: center;
+    }
+    .input_fields {
+        width: 100%;
+    }
+    .image_container {
+        display: none;
+    }
+    .image_container>div {
+        display: none;
+    }
+}
+@media screen and (max-width:426px) {
+    .main_container{
+        width: 100%;
+        height: 100%;
+    }
+    .LoginBox {
+        padding: 45px 35px;
+        width: 100%;
+        backdrop-filter: blur(8px);
+    }
+    .LoginBox::before {    
+        content: "";
+        background-image: url(/src/component/images/fork.jpeg);
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.10;
+  }
+  .input_fields,.submit_btn,.lower_links{
+    position: relative;
+  }
+  
+}
